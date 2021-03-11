@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Realink</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="shortcut icon" href="{% static 'img/icon.png' %}">
+
+</head>
+
+<body class="section">
+
+  
+
+
+  <div>
+    <div class="container">
+        
+      <div class="row align-items-start">
+        <div class="sections col text-white">
+
+
+          <div id="containter-da-imagem"> <img src="{% static 'img/logo.png' %}"> </div>
+
+          
+
+          <h4>encontre os melhores sites de animes mangás e novels</h4>
+          <br>
+          <br>
+          <h2>- Começar! -</h2>
+          <br>
+          <br>
+          <div class="container">
+            <a href="{% url 'manga' %}" style="background-color:#006d5b"
+              class="btn my-2 mx-3 px-5 text-white">Mangá</a>
+
+              <a href="{% url 'novel' %}" style="background-color:#006d5b"
+              class="btn my-2 mx-4 px-5 text-white">Novel</a>
+
+              <a href="{% url 'anime' %}" style="background-color:#006d5b"
+              class="btn my-2 mx-3 px-5 text-white">Anime</a>
+          </div>
+              <br>
+              <br>
+              <br>
+              <br>
+
+        </div>
+      </div>
+
+
+        <div class="video-container">
+            
+            <video autoplay loop muted>
+                <source src="{% static 'others/video.mp4' %}" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+
+
+  
+<style> 
+
+#container-da-imagem {
+    width: 300px;
+    position: relative;
+}
+#container-da-imagem img {
+    width: 50%
+}
+img {
+    width: 50%
+}
+
+.bgzin {
+  background-color: #1b1b1b;
+  overflow: hidden;
+  overflow-y: hidden;
+} 
+.section {
+
+  position: static;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sections {
+  text-align: center;
+  padding: 10px;
+  margin:10px;
+  z-index: 1;
+  opacity: 1;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+</style>
+
+</body>
+
+</html>

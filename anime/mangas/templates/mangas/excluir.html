@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+
+<div class="d-flex justify-content-center align-content-center">
+  <div class="px-5 py-5 my-5 card">
+
+    <form method="POST">
+      {% csrf_token %}
+      Deseja excluir
+      {{object.site_nome}} ?
+      <br>
+      <button type="submit" class="btn btn-danger mt-2">sim</button>
+    </form>
+    
+    
+  </div>
+</div>
+
+{% endblock %}

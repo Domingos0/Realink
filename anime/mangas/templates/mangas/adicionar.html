@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<center>
+  <div class="card px-4 py-4 my-3 " style="width:18rem;">
+    <form method="POST">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label class="form-label" for="id_site_nome">Nome do site</label>
+        <input class="form-control" placeholder="Nome do site" type="text" name="site_nome" maxlength="200"
+          required="" id="id_site_nome">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="id_url_nome">URL do site</label>
+        <input class="form-control" placeholder="URL do site" type="text" name="url_nome" maxlength="200" required=""
+          id="id_url_nome">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="id_nome_genero">URL da Imagem</label>
+        <input class="form-control" placeholder="URL da Imagem" type="text" name="nome_genero" maxlength="200"
+          required="" id="id_nome_genero">
+      </div>
+      <div class="mb-3">
+        <label class="form-label for=" id_categoria">Categoria:</label>
+        <select class="form-select" name="categoria" id="id_categoria">
+          <option value="manga">Mangá</option>
+          <option value="anime">Anime</option>
+          <option value="novel">Novel</option>
+        </select>
+      </div>
+      <input type="submit" value="Salvar" class="btn btn-dark">
+    </form>
+  </div>
+  <div class="container">
+  </div>
+</center>
+{% endblock %}
